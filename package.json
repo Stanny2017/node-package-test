@@ -1,0 +1,27 @@
+{
+  "name": "node-package-test",
+  "version": "1.0.0",
+  "description": "npm test",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "postinstall": "npm run test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.6.3"
+  },
+  "jest": {
+    "verbose": true,
+    "setupFilesAfterEnv": [
+      "<rootDir>/__test__/setupTestFramework.js"
+    ],
+    "testMatch": [
+      "<rootDir>/__test__/*.test.js",
+      "<rootDir>/__test__/*.spec.js"
+    ],
+    "testEnvironment": "node"
+  }
+}
